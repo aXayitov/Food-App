@@ -25,6 +25,7 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -32,15 +33,18 @@ android {
 }
 
 dependencies {
-
+    // AndroidX va Material
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+
+    // Uchinchi tomon kutubxonalari
+    implementation("com.github.bumptech.glide:glide:4.16.0") // Yangilangan versiya, AndroidX mos
+    implementation("com.google.code.gson:gson:2.8.7")
+
+    // Testlar
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation("com.google.android.material:material:1.4.8-rc01")
-    implementation("com.github.bumptech.glide:glide:4.8.0")
-    implementation("com.google.code.gson:gson:2.8.7")
 }
