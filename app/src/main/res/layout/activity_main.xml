@@ -168,7 +168,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:paddingLeft="22dp"
                     android:paddingRight="22dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -191,15 +191,12 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerView2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:paddingLeft="22dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-
             </androidx.constraintlayout.widget.ConstraintLayout>
-
         </LinearLayout>
     </ScrollView>
 
@@ -208,17 +205,17 @@
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView">
 
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/app_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:backgroundTint="#f6f6f6"
             app:fabCradleMargin="8dp"
-            app:fabCradleRoundedCornerRadius="50dp"
-            app:fabCradleVerticalOffset="6dp">
+            app:fabCradleRoundedCornerRadius="28dp"
+            app:fabCradleVerticalOffset="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -233,44 +230,40 @@
 
                     <ImageView
                         android:id="@+id/homeBtnimage"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
                         app:srcCompat="@drawable/btn1" />
 
                     <TextView
                         android:id="@+id/homeBtnTxt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
                         android:text="Home"
-                        android:textAlignment="center"
-                        android:textColor="#676767"
-                        android:textSize="12sp" />
+                        android:textAlignment="center" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/profileBtn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
-                    android:orientation="vertical"
-                    android:visibility="visible">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/profileBtnImage"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
                         app:srcCompat="@drawable/btn2" />
 
                     <TextView
                         android:id="@+id/profileBtnTxt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
                         android:text="Profile"
-                        android:textAlignment="center"
-                        android:textColor="#676767"
-                        android:textSize="12sp" />
+                        android:textAlignment="center" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -286,7 +279,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/btn3" />
+                        app:srcCompat="@drawable/shopping_cart" />
 
                     <TextView
                         android:id="@+id/textView124"
@@ -299,7 +292,6 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/supportBtn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
@@ -307,23 +299,21 @@
 
                     <ImageView
                         android:id="@+id/supportBtnImage"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
                         app:srcCompat="@drawable/btn3" />
 
                     <TextView
                         android:id="@+id/supportBtnTxt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
                         android:text="Support"
-                        android:textAlignment="center"
-                        android:textColor="#676767"
-                        android:textSize="12sp" />
+                        android:textAlignment="center" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/settingBtn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
@@ -331,32 +321,42 @@
 
                     <ImageView
                         android:id="@+id/settingsBtnImage"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
                         app:srcCompat="@drawable/btn4" />
 
                     <TextView
                         android:id="@+id/settingBtnTxt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
                         android:text="Settings"
-                        android:textAlignment="center"
-                        android:textColor="#676767"
-                        android:textSize="12sp" />
+                        android:textAlignment="center" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.bottomappbar.BottomAppBar>
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#ff5e00"
-            android:elevation="3dp"
-            app:layout_anchor="@id/app_bar"
             android:src="@drawable/shopping_cart"
-            app:backgroundTint="#ff5e00">
+            app:backgroundTint="#ff5e00"
+            app:layout_anchor="@id/app_bar"
+            app:maxImageSize="30dp"
+            app:tint="@color/white"
+            android:visibility="invisible"/>
 
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_margin="16dp"
+            app:backgroundTint="#ff5e00"
+            android:src="@drawable/shopping_cart"
+            app:layout_anchor="@id/app_bar"
+            app:layout_anchorGravity="center" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
